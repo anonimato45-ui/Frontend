@@ -28,7 +28,7 @@ updateForm.addEventListener('submit', async (e) => {
         
         if (response.ok) {
 
-            // Actualizar datos de sesión
+          
             localStorage.setItem('userEmail', newEmail);
             sessionStorage.setItem('username', newUsername);
             sessionStorage.setItem('isLoggedIn', 'true');
@@ -36,7 +36,7 @@ updateForm.addEventListener('submit', async (e) => {
             mensajeUpdate.style.color = 'green';
             mensajeUpdate.textContent = `✅ ¡Cuenta actualizada!`;
             
-            // Esperar a que el mensaje se muestre antes de redireccionar
+            
             setTimeout(() => {
                 window.location.href = 'Pagina_trabajo.html';
             }, 1000); 

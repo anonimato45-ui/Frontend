@@ -1,22 +1,21 @@
 const URL_BASE = 'http://localhost:3000';
-// Elementos del DOM
 const taskForm = document.getElementById('task-form');
 const taskFormTitle = document.getElementById('task-form-title');
 const tasksContainer = document.getElementById('taskList');
 const taskInput = document.getElementById('task-title');
-const taskDescription = document.getElementById('task_description'); // textarea para la descripción
+const taskDescription = document.getElementById('task_description'); 
 const userDisplay = document.getElementById('userDisplay');
 const username = localStorage.getItem('username');
 let editingTaskId = null;
 
-// Mostrar usuario o redirigir
+
 if (username) {
     userDisplay.textContent = username;
 } else {
     window.location.href = './login.html';
 }
 
-// Cargar tareas al iniciar
+
 document.addEventListener('DOMContentLoaded', async () => {
     const userEmail = localStorage.getItem('userEmail');
     if (!userEmail) {
@@ -34,7 +33,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     await loadTasks();
 });
 
-// Enviar formulario
+
 taskForm.addEventListener('submit', handleTaskSubmit);
 
 async function loadTasks() {

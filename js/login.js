@@ -31,7 +31,7 @@ form.addEventListener('submit', async (e) => {
 
  
             mensaje.style.color = 'green';
-            mensaje.textContent = `🥳 ¡Bienvenido, ${data.username || 'usuario'}! Redirigiendo...`; // Mejorar el mensaje
+            mensaje.textContent = `🥳 ¡Bienvenido, ${data.username || 'usuario'}! Redirigiendo...`;
             form.reset(); 
 
              setTimeout(()  => {
